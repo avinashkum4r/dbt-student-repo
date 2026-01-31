@@ -1,11 +1,5 @@
-{{
-    config (
-        materialized= "view"
-    )
-}}
-
 with raw_hosts as (
-    select * from airbnb.raw.raw_hosts
+    select * from {{ source('airbnbraw', 'hosts') }}
 )
 select
     id as host_id,

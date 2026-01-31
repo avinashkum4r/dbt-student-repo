@@ -1,10 +1,5 @@
-{{config 
-    (
-    materialized= "view"
-    )
-}}
 with raw_listing as (
-    select * from airbnb.raw.raw_listings
+    select * from {{ source('airbnbraw', 'listings') }}
 )
 select
     id as listing_id,
