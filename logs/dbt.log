@@ -333,3 +333,16 @@ https://docs.getdbt.com/docs/configure-your-profile
 
 [0m00:44:48.524074 [debug] [MainThread]: Command `dbt debug` failed at 00:44:48.523966 after 0.21 seconds
 [0m00:44:48.524378 [debug] [MainThread]: Flushing usage events
+[0m18:02:35.848831 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 18:02:35.910239 | 26cb017a-43d2-4db8-b299-4177381a8766 ==============================
+[0m18:02:35.910239 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:02:35.911392 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\HP\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m18:02:35.911876 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\DBT\student-repo\dbt-student-repo\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:02:35.912926 [debug] [MainThread]: Command `dbt test` failed at 18:02:35.912802 after 0.14 seconds
+[0m18:02:35.913226 [debug] [MainThread]: Flushing usage events

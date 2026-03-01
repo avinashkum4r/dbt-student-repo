@@ -30,9 +30,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
+  +pre_hook: "{{ validate_model_name() }}"
   airbnb:
     +materialized: view
     dim:
       +materialized: table
     src:
       +materialized: ephemeral
+
+data_tests:
+  +store_failures: true
+  +schema: _test_failures
